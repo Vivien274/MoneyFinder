@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSf11YqtZz2rySIng8GeyhEJeg6k57Vds&sensor=true"></script>
+		<script type="text/javascript" src="js/mapScript.js"></script>
+		
+		<script type="text/javascript" src="js/pin.js"></script>
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<!-- <script type="text/javascript">
+			function MenuFunction()
+			{
+				document.getElementById('ListeBanques').style.cssText = 'display: block;';
+			}
+		</script> -->
+		
+		
+		<script type="text/javascript"> 
+		
+		$(document).ready(function() {
+			$("#IconMenu").click(function(){
+				$('#MenuApp').toggle('fast');
+			});
+		}); 
+		
+		$(document).ready(function() {
+			$(".BankFilterButton").click(function(){
+				$('#ListeBanques').toggle('fast');
+			});
+		}); 
+		</script>
+		
+	</head>
+	
+	<body>
+		<div id="header">
+			<img src="img/icon.png" id="IconMenu" onclick="MenuFunction()"/>
+			<span>MoneyFinder</span>
+		</div>
+			<div id="MenuApp">
+				<h3 class="BankFilterButton">Filtrer par banque</h3>
+				<ul id="ListeBanques">
+					<li>AXA</li>
+					<li>Banque Postale</li>
+					<li>BNP Paribas</li>
+					<li>Crédit Agricole</li>
+					<li>Crédit Mutuel - CIC</li>
+					<li>Société générale</li>
+					<li>Caisse d'épargne</li>
+					<li>Groupama</li>
+					
+				</ul>
+				
+				<h3>A propos de MoneyFinder</h3>
+
+			</div>
+		<div id="map-canvas"></div>
+	</body>
+</html>
